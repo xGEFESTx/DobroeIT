@@ -17,17 +17,38 @@ public class HomeWork_1 {
 
     private static int sum(int a, int b, int c){
 
-        int array [] = {a, b, c};
         int sum = 0;
 
-            for (int i = 0; i < array.length; i++){
-                int rand = (int) (Math.random()*200 - 100);
-                array[i] = rand;
-
-            if (array[i] > 0){
-                sum += array[i];
-            }
+        if (a >= 0 && b >= 0 && c >= 0 ){
+            sum = a + b + c;
         }
+        else if (a >= 0 && b >= 0 && c < 0 ){
+            sum = a + b;
+        }
+        else if (a >= 0 && b < 0 && c >= 0 ){
+            sum = a + c;
+        }
+
+        else if (a < 0 && b >= 0 && c >= 0 ){
+            sum = b + c;
+        }
+
+        else if (a < 0 && b < 0 && c >= 0 ){
+            sum = c;
+        }
+
+        else if (a < 0 && b >= 0 && c < 0 ){
+            sum = b;
+        }
+
+        else if (a >= 0 && b < 0 && c < 0 ){
+            sum = a;
+        }
+
+        else {
+            sum = 0;
+        }
+
         return sum;
     }
 }

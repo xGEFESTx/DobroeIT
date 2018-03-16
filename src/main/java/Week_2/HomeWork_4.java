@@ -1,7 +1,7 @@
 package Week_2;
 
- //Написать функцию, принимающую на вход целое число,
- // и возвращающую факториал данного числа. *Написать две версии программы(итеративную и рекурсивную)
+//Написать функцию, принимающую на вход целое число,
+// и возвращающую факториал данного числа. *Написать две версии программы(итеративную и рекурсивную)
 
 public class HomeWork_4 {
     public static void main(String[] args) {
@@ -22,13 +22,16 @@ public class HomeWork_4 {
         return result;
     }
 
-    // рекурсивная версия
-    private static int recFactorial(int x){
-        int result=1;
-        for (int i = 1; i <= x; i++)
-        {
-            result *= i;
+
+    // рекурсивный метод
+    private static   int recFactorial(int n) {
+        int result;
+
+        if (n == 1) {
+            return 1;
         }
-        return  result;
+        result = recFactorial(n - 1) * n;
+
+        return result;
     }
 }
