@@ -19,36 +19,11 @@ public class HomeWork_1 {
 
         int sum = 0;
 
-        if (a >= 0 && b >= 0 && c >= 0 ){
-            sum = a + b + c;
-        }
-        else if (a >= 0 && b >= 0 && c < 0 ){
-            sum = a + b;
-        }
-        else if (a >= 0 && b < 0 && c >= 0 ){
-            sum = a + c;
-        }
+        if (a >= 0)  sum += a;
+        if (b >= 0)  sum += b;
+        if (c >= 0)  sum += c;
 
-        else if (a < 0 && b >= 0 && c >= 0 ){
-            sum = b + c;
-        }
+            return sum;
 
-        else if (a < 0 && b < 0 && c >= 0 ){
-            sum = c;
-        }
-
-        else if (a < 0 && b >= 0 && c < 0 ){
-            sum = b;
-        }
-
-        else if (a >= 0 && b < 0 && c < 0 ){
-            sum = a;
-        }
-
-        else {
-            sum = 0;
-        }
-
-        return sum;
     }
 }
