@@ -1,16 +1,15 @@
 package Week_3;
 
-public class Animal {
-    public void voice(String say){
-        System.out.println(say);
-    }
+abstract class Animal {
+    abstract void voice();
 
-    //-------- узнаем сколько  создано собак --------//
+
+    //-------- узнаем сколько  создано животных --------//
     private static int count = 0;
     Animal (){
         count++;
     }
-    public void setCount(){
+    public void countObj(){
         System.out.println("Было создано " + count + " животных");
     }
 }
