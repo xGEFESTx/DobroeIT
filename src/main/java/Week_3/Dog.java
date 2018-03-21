@@ -2,18 +2,19 @@ package Week_3;
 
 public class Dog extends Animal{
 
-//    private static int count = 0;
+    Dog(double age, String name){
+        super.setAge(age);
+        super.setName(name);
+    }
+
     private String say = "Гав";
 
     public void voice () {
         System.out.println(say);
     }
 
-//    //-------- узнаем сколько  создано собак --------//
-//    public Dog (){
-//        count++;
-//    }
-//    public void countObj(){
-//        System.out.println("Было создано " + count + " собак");
-//    }
+    @Override
+    public String toString() {
+        return "Собака " + super.toString();
+    }
 }

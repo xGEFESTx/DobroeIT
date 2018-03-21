@@ -2,13 +2,13 @@ package Week_3;
 
 abstract class Animal {
 
-    private int age;
+    private double age;
     private String name;
 
-    public void setAge (int age){
+    public void setAge (double age){
         this.age = age;
     }
-    public int getAge (){
+    public double getAge (){
         return age;
     }
 
@@ -19,6 +19,10 @@ abstract class Animal {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return age + " лет, кличка - " + name ;
+    }
 
     abstract void voice();
 
