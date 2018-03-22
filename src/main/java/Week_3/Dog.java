@@ -3,8 +3,7 @@ package Week_3;
 public class Dog extends Animal{
 
     Dog(double age, String name){
-        super.setAge(age);
-        super.setName(name);
+        super(age, name);
     }
 
     private String say = "Гав";

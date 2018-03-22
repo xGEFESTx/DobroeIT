@@ -4,6 +4,14 @@ abstract class Animal {
 
     private double age;
     private String name;
+    private static int count = 0;
+
+    public Animal(double age, String name) {
+        this.age = age;
+        this.name = name;
+        count++;
+    }
+
 
     public void setAge (double age){
         this.age = age;
@@ -28,10 +36,7 @@ abstract class Animal {
 
 
     //-------- узнаем сколько  создано животных --------//
-    private static int count = 0;
-    Animal (){
-        count++;
-    }
+
     public void countObj(){
         System.out.println("Было создано " + count + " животных");
     }
