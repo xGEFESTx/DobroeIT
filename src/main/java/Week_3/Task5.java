@@ -1,14 +1,7 @@
 package Week_3;
 
 public class Task5 {
-    public static void main(String[] args) {
-        int [] arr = {0, 0, 3};
-        int[] newArr = sameArray(arr);
-        for (int i: newArr){
-            System.out.println(i);
-        }
 
-    }
 
     public static int[] sameArray(int[] array) {
         int max = array[0];
