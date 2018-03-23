@@ -7,21 +7,31 @@ abstract class Animal {
     private static int count = 0;
 
     public Animal(double age, String name) {
-        this.age = age;
-        this.name = name;
+        setAge(age);
+        setName(name);
         count++;
     }
 
 
     public void setAge (double age){
-        this.age = age;
+        if (age <= 0){
+            System.out.println("Вы не ввели неправильный возраст");
+        }
+        else {
+            this.age = age;
+        }
     }
     public double getAge (){
         return age;
     }
 
     public void setName (String name){
-        this.name = name;
+        if (name.isEmpty()){
+            System.out.println("Вы не ввели имя");
+        }
+        else {
+            this.name = name;
+        }
     }
     public String getName() {
         return name;
@@ -35,9 +45,7 @@ abstract class Animal {
     abstract void voice();
 
 
-    //-------- узнаем сколько  создано животных --------//
-
-    public void countObj(){
+     public void countObj(){
         System.out.println("Было создано " + count + " животных");
     }
 }
