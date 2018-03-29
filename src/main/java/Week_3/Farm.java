@@ -11,14 +11,13 @@ public class Farm {
         return pitomnik;
     }
 
-    public Animal[] addAnimalAndReturnArrayAnimal(Animal animal) {
+    public void  addAnimalAndReturnArrayAnimal(Animal animal) {
         Animal[] arr = {animal};
         Animal[] arrayAnimal = new Animal[pitomnik.length + arr.length];
         System.arraycopy(pitomnik, 0, arrayAnimal, 0, pitomnik.length);
         System.arraycopy(arr, 0, arrayAnimal, pitomnik.length, arr.length);
-        pitomnik = arrayAnimal;
+        setPitomnik(arrayAnimal);
 
-        return pitomnik;
     }
 
     public Animal[] selectAnimal(Object clazz, double start, double end) {

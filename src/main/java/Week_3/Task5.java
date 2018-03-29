@@ -2,7 +2,6 @@ package Week_3;
 
 public class Task5 {
 
-
     public static int[] sameArray(int[] array) {
         int max = array[0];
         int min = array[0];
