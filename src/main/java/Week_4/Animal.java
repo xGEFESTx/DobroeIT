@@ -10,21 +10,6 @@ abstract class Animal {
         setName(name);
     }
 
-//-- животные одинакового типа и с одинаковым возрастом и именем при проверке на equals распознаны, как одинаковые--\\
-    public boolean equals (Object obj){
-        Animal sameAnimal = (Animal)obj;
-        if (this.getName() == sameAnimal.getName()){
-            if (this.getAge() == sameAnimal.getAge()){
-                if (this.getClass().isInstance(obj)){
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-
     public void setAge (double age){
         if (age <= 0){
             System.out.println("Вы не ввели неправильный возраст");
@@ -49,6 +34,20 @@ abstract class Animal {
         return name;
     }
 
+    //Переопределяем метода equals() для сравнения животных одинакового типа и с одинаковым возрастом и именем и  распознании их как одинаковые
+    public boolean equals (Object obj){
+        Animal sameAnimal = (Animal)obj;
+        if (this.getName() == sameAnimal.getName()){
+            if (this.getAge() == sameAnimal.getAge()){
+                if (this.getClass().isInstance(obj)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    //Переопределяем метод toString() для вывода на печать информации о типе животного, его возраст и имя
     @Override
     public String toString() {
 
