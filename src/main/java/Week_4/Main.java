@@ -11,6 +11,9 @@ public class Main {
         Animal[] arrayAnimal = {cat1, salmon, cat2, dog, trunks};
 
 
+
+
+
         //Выводим на консоль, что объекты cat1 и cat2 одинаковые так как их тип, возраст и имя одинаковые
         System.out.println(cat1.equals(cat2));
 
@@ -21,12 +24,12 @@ public class Main {
 
         //Генерируем большое количество собак (провоцируем срабатывания сборщика мусора)
         // и выводим на консоль звук при уничтожении объекта
-        for ( int count = 1; count < 700000; count++){
+        for ( int count = 1; count < 1000000; count++){
             dog.generator(5.0, "Bob");
         }
         //Генерируем большое количество котов (провоцируем срабатывания сборщика мусора)
         // и выводим на консоль звук при уничтожении объекта
-        for (int count = 1; count < 700000; count++){
+        for (int count = 1; count < 1000000; count++){
             cat1.generator(3.3, "Мурзик");
         }
 

@@ -35,11 +35,20 @@ abstract class Animal {
     }
 
     //Переопределяем метода equals() для сравнения животных одинакового типа и с одинаковым возрастом и именем и  распознании их как одинаковые
-    public boolean equals (Object obj){
-        Animal sameAnimal = (Animal)obj;
-        if (this.getName() == sameAnimal.getName()){
-            if (this.getAge() == sameAnimal.getAge()){
-                if (this.getClass().isInstance(obj)){
+    public boolean equals (Object obj) {
+
+        if(obj == null) {
+            return false;
+        }
+        // вот тут я попал в ступор, так как instanceof может принять и null в связи с чем если я
+        // правильно все понял то проверка на null уже не нужна... но так как я не уверен, то проверку оставил :)
+        if (!(obj instanceof Animal)){
+            return false;
+        }
+        Animal sameAnimal = (Animal) obj;
+        if (this.getName() == (sameAnimal.getName())) {
+            if (this.getAge() == sameAnimal.getAge()) {
+                if (this.getClass().isInstance(obj)) {
                     return true;
                 }
             }
@@ -55,4 +64,8 @@ abstract class Animal {
     }
 
     abstract void voice() throws NotImplementedException;
+    abstract void dyingVoice();
+    protected void finalize(){
+        dyingVoice();
+    }
 }

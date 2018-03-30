@@ -8,4 +8,9 @@ public class Fish extends Animal {
         throw new NotImplementedException();
     }
 
+    @Override
+    void dyingVoice() {
+        System.out.println("pgfkgfk.....");
+    }
+
 }
